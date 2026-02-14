@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- =========================================
+        META
+    ========================================= -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- =========================================
+        PAGE TITLE
+    ========================================= -->
+    <title>Tomasz & Dinesha — Wedding Invite</title>
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%8D%3C/text%3E%3C/svg%3E">
+
+    <!-- =========================================
+        FONTS
+    ========================================= -->
+    <!-- Google Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Cormorant+Garamond:wght@300;400;600&display=swap">
+
+    <!-- =========================================
+        ICONS
+    ========================================= -->
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+    <!-- =========================================
+        STYLESHEETS
+    ========================================= -->
+    <!-- Core style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Navigation styles -->
+    <link rel="stylesheet" href="css/navigation.css">
+
+    <!-- Audio styles -->
+    <link rel="stylesheet" href="css/loader.css">
+
+    <!-- Desktop style -->
+    <link rel="stylesheet" href="css/desktop.css">
+
+    <!-- Mobile style -->
+    <link rel="stylesheet" href="css/small-mobile.css">
+
+</head>
+
+<body>
+
+    <!-- Music -->
+    <audio id="bg-music" loop>
+        <source src="audio/Thuli_Thuli.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-ring"></div>
+        <p class="loader-text">Tomasz & Dinesha</p>
+
+        <button id="enter-btn" class="enter-btn">
+            Enter with Music
+        </button>
+    </div>
+
+    <!-- INVITATION CONTENT -->
+    <div id="invitation" class="invitation">
+
+        <!-- =========================================
+        HEADER / HERO
+        ========================================= -->
+        <header class="hero-hero" role="banner">
+            <div class="bg" aria-hidden="true"></div>
+
+            <div class="hero-content">
+                <div class="hero-top">
+                    <div class="divider"></div>
+                    <h1 class="names">
+                        <span class="initial">T</span>omasz <br>
+                        &amp;<br>
+                        <span class="initial">D</span>inesha
+                    </h1>
+                    <div class="divider"></div>
+                    <p class="date">30.08.2026</p>
+                </div>
+                <div class="hero-bottom">
+                    <div class="countdown-box">
+                        <div class="time-block">
+                            <div class="time" id="days">00</div>
+                            <p>Days</p>
+                        </div>
+                        <div class="time-block">
+                            <div class="time" id="hours">00</div>
+                            <p>Hours</p>
+                        </div>
+                        <div class="time-block">
+                            <div class="time" id="minutes">00</div>
+                            <p>Minutes</p>
+                        </div>
+                        <div class="time-block">
+                            <div class="time" id="seconds">00</div>
+                            <p>Seconds</p>
+                        </div>
+                    </div>
+                    <div class="countdown-buttons">
+                        <a href="#" class="cta-btn" onclick="downloadCalendarEvent()">Save the Date</a>
+                        <a href="#rsvp-section" class="cta-btn">RSVP</a>
+                    </div>
+
+                    <div class="attend-counter">
+                        <span class="attend-number" id="attendeeCount">0</span>
+                        <span class="attend-label">Confirmed Guests</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- =========================================
+        MAIN CONTENT
+        ========================================= -->
+        <main>
+
+            <!-- =====================================
+            ABOUT / OUR STORY
+            ===================================== -->
+            <section class="about-section">
+
+                <!-- Section header -->
+                <div class="section-title">
+                    <P class="section-subtitle">Bride & Groom</p>
+                    <h2 class="section-main-title">The Couple</h2>
+                </div>
+
+                <!-- Couple story text -->
+                <div class="about-card">
+                    <div class="bio">
+                        <p>
+                            Having been pen pals for over a year, Tom and Dinesha met in person for the
+                            very first time in the summer of 2019. From that moment, they instantly fell
+                            in love and soon began their journey together.
+                        </p>
+
+                        <p>
+                            Ever since, they have been side by side. Travelling the world, enjoying
+                            their shared hobbies, discovering great food, and building an amazing
+                            future together.
+                        </p>
+
+                        <p>
+                            Now, Tom and Dinesha would love to invite you to celebrate their wedding and
+                            share in the joy and happiness of this beautiful day.
+                        </p>
+                    </div>
+
+                    <!-- Portrait / image slider -->
+                    <div class="portrait-slider">
+                        <img src="pics/02.JPG" class="slide active" alt="Tom and Dinesha portrait 1">
+                        <img src="pics/11.jpg" class="slide" alt="Tom and Dinesha portrait 2">
+                        <img src="pics/07.jpeg" class="slide" alt="Tom and Dinesha portrait 3">
+                        <img src="pics/08.jpeg" class="slide" alt="Tom and Dinesha portrait 4">
+                        <img src="pics/28.jpeg" class="slide" alt="Tom and Dinesha portrait 5">
+                        <img src="pics/09.jpg" class="slide" alt="Tom and Dinesha portrait 6">
+                        <img src="pics/06.jpg" class="slide" alt="Tom and Dinesha portrait 7">
+                        <img src="pics/16.jpg" class="slide" alt="Tom and Dinesha portrait 8">
+                        <img src="pics/05.jpg" class="slide" alt="Tom and Dinesha portrait 9">
+                        <img src="pics/24.jpg" class="slide" alt="Tom and Dinesha portrait 10">
+                        <img src="pics/26.jpg" class="slide" alt="Tom and Dinesha portrait 11">
+                        <img src="pics/32.jpeg" class="slide" alt="Tom and Dinesha portrait 12">
+                        <img src="pics/13.jpg" class="slide" alt="Tom and Dinesha portrait 13">
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================
+            SCHEDULE / ITINERARY
+            ===================================== -->
+            <section class="schedule-section">
+
+                <!-- Section header -->
+                <div class="section-title">
+                    <p class="section-subtitle">Wedding Itinerary</p>
+                    <h2 class="section-main-title">The Celebration</h2>
+                </div>
+
+                <!-- Events slider -->
+                <div class="schedule-container">
+                    <div class="events-slider">
+                        <div class="events-tracker">
+
+                            <!-- Event cards -->
+                            <!-- Event 1 -->
+                            <div class="event-card">
+                                <div class="event-content">
+                                    <h4>Arrival of Guests</h4>
+                                    <span class="event-time">09:00</span>
+                                    <p>Begin the day with warm smiles as we welcome the bride and groom's cherished
+                                        guests.
+                                        Enjoy light breakfast and refreshments that we have prepared for you.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Event 2 -->
+                            <div class="event-card">
+                                <div class="event-content">
+                                    <h4>Wedding Ceremony</h4>
+                                    <span class="event-time">09:30</span>
+                                    <p>Join us for the sacred rituals as the bride and groom exchange vows
+                                        and begin their journey together in the presence of their loved ones.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Event 3 -->
+                            <div class="event-card">
+                                <div class="event-content">
+                                    <h4>Lunch Reception</h4>
+                                    <span class="event-time">12:00</span>
+                                    <p>Celebrate the bride and groom's union with a delightful lunch reception.
+                                        Featuring comforting and home-cooked style dishes to satisfy your palate.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Event 4 -->
+                            <div class="event-card">
+                                <div class="event-content">
+                                    <h4>Closing & Farewell</h4>
+                                    <span class="event-time">14:00</span>
+                                    <p>End the day with heartfelt goodbyes and blessings.
+                                        We conclude the celebration of love and joy.
+                                        Thank you for being a part of the special day.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline indicators -->
+                <div class="timeline">
+                    <button class="active" data-event="arrival"></button>
+                    <button data-event="ceremony"></button>
+                    <button data-event="lunch"></button>
+                    <button data-event="farewell"></button>
+                </div>
+
+                <!-- Timeline labels -->
+                <div class="timeline-labels">
+                    <span>Arrival</span>
+                    <span>Ceremony</span>
+                    <span>Lunch</span>
+                    <span>Farewell </span>
+            </section>
+
+            <!-- =====================================
+            GUESTBOOK / COMMENTS
+            ===================================== -->
+            <section class="comment-section">
+
+                <!-- Section header -->
+                <div class="section-title">
+                    <p class="section-subtitle">Best Wishes</p>
+                    <h2 class="section-main-title">The Guestbook</h2>
+                </div>
+
+                <!-- Message form -->
+                <div class="message-container">
+                    <div class="guestbook-card">
+                        <form id="guestbook-form" class="guestbook-form">
+                            <div class="form-row">
+                                <input type="text" id="guest-name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-row">
+                                <textarea id="guest-message" name="message" rows="4"
+                                    placeholder="Write your wishes for the couple..." required></textarea>
+                            </div>
+
+                            <!-- Call-to-action button -->
+                            <div class="form-actions">
+                                <button type="submit" class="comment-submit-btn">Send Wishes</button>
+                            </div>
+                        </form>
+
+                        <!-- Messages will appear here -->
+                        <div id="guestbook-messages" class="guestbook-messages"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================
+            RSVP
+            ===================================== -->
+            <section id="rsvp-section">
+
+                <!-- Section header -->
+                <div class="section-title">
+                    <p class="section-subtitle">RSVP</p>
+                    <h2 class="section-main-title">The Confirmation</h2>
+                </div>
+
+                <!-- RSVP form -->
+                <div class="confirmation-container">
+                    <div class="rsvp-card">
+
+                        <form class="rsvp-grid"
+                            action="https://script.google.com/macros/s/AKfycby_uaQEg3nMRqozvIVY8mTtq6FNjgAmHEAcFKRiBV0i27eRUnFN6DVtkH6OnW0oKZYaEA/exec"
+                            method="POST">
+
+                            <label class="small">Your name
+                                <input type="text" name="fullName" placeholder="Your full name" required>
+                            </label>
+
+                            <label class="small">Email
+                                <input type="email" name="email" placeholder="you@example.com">
+                            </label>
+
+                            <label class="small">Attending?
+                                <select name="attending" id="attending-select" required>
+                                    <option value="">Select an option</option>
+                                    <option>I am attending</option>
+                                    <option>Regretfully decline</option>
+                                </select>
+                            </label>
+
+                            <label class="small" id="guests-wrapper">Guests
+                                <select name="guests" id="guests-select">
+                                    <option value="">Select an option</option>
+                                    <option>Myself</option>
+                                    <option>Myself and 1 Guest</option>
+                                </select>
+                            </label>
+
+                            <label class="small">Lunch Selection
+                                <select name="lunchSelection" required>
+                                    <option value="">Select an option</option>
+                                    <option>Non-Vegetarian</option>
+                                    <option>Vegetarian</option>
+                                    <option>No Preference / Happy with Either</option>
+                                </select>
+                            </label>
+
+                            <label class="small">Phone
+                                <input type="tel" name="phone" placeholder="+6012345xxxx" required>
+                            </label>
+
+                            <label class="small">Message (Optional)
+                                <textarea name="message"
+                                    placeholder="Any dietary requirements or special requests?"></textarea>
+                            </label>
+
+                            <button type="submit" class="rsvp-submit-btn">
+                                Submit RSVP
+                            </button>
+
+                            <!-- Success message -->
+                            <p id="rsvp-success" class="rsvp-success-message"></p>
+
+
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- =========================================
+        POPUP OVERLAYS / MODALS
+        ========================================= -->
+    <!-- Contact Popup -->
+    <div class="popup-overlay" id="popup-contact">
+        <div class="popup-content contact-popup">
+            <div class="popup-header">
+                <h2>Contact</h2>
+                <button class="popup-close">&times;</button>
+            </div>
+            <div class="popup-body contact-body">
+                <div class="contacts-grid">
+
+                    <!-- Contact 1 -->
+                    <div class="contact-card">
+                        <h4>Dr. Kanagasundaram</h4>
+                        <p class="contact-role">Father of the Bride</p>
+                        <div class="contact-methods">
+                            <a href="tel:+60125063488" class="contact-link">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+60 12-506 3488</span>
+                            </a>
+                            <a href="https://wa.me/0125063488" target="_blank" class="contact-link whatsapp-link">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact 2 -->
+                    <div class="contact-card">
+                        <h4>Malar</h4>
+                        <p class="contact-role">Aunt of the Bride</p>
+                        <div class="contact-methods">
+                            <a href="tel:+60166844963" class="contact-link">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+60 16-684 4963</span>
+                            </a>
+                            <a href="https://wa.me/0166844963" target="_blank" class="contact-link whatsapp-link">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Venue Popup -->
+    <div class="popup-overlay" id="popup-venue">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>Venue</h2>
+                <button class="popup-close">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="popup-info-item">
+                    <div class="popup-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="popup-info-content">
+                        <h4>Jasmine Banquet Hall</h4>
+                        <p>Global Business & Convention Centre<br>8, Jalan 19/1, Seksyen 19,<br>46300 Petaling Jaya,
+                            Selangor
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-methods">
+                    <a class="contact-link map-link" href="https://waze.com/ul?q=123+Wedding+Lane+Celebration+City"
+                        target="_blank">
+                        <i class="fab fa-waze"></i>
+                        <span>Open in Waze</span>
+                    </a>
+                    <a class="contact-link map-link"
+                        href="https://www.google.com/maps/dir/?api=1&destination=123+Wedding+Lane+Celebration+City"
+                        target="_blank">
+                        <i class="fas fa-map"></i>
+                        <span>Open in Google Maps</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gifts Popup -->
+    <div class="popup-overlay" id="popup-gift">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>Gifts</h2>
+                <button class="popup-close">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="popup-info-item">
+                    <div class="popup-info-icon"><i class="fas fa-qrcode"></i></div>
+                    <div class="popup-info-content">
+                        <h4>QR Code</h4>
+                        <img class="qr-image" src="pics/qr.JPG" alt="Gift QR code" />
+                    </div>
+                </div>
+
+                <div class="popup-info-item">
+                    <div class="popup-info-icon"><i class="fas fa-university"></i></div>
+                    <div class="popup-info-content">
+                        <h4>Bank Transfer</h4>
+                        <p>Account Name: Dinesha Kanagasundaram</p>
+                        <p>Bank: <strong>Maybank</strong></p>
+                        <p class="account-row">
+                            Account Number:
+                            <span class="gift-account">158163316616</span>
+                            <button class="copy-btn" data-copy="158163316616" aria-label="Copy account number">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Menu -->
+    <div class="menu-bar-container">
+        <div class="menu-bar">
+            <div class="menu-item" data-target="contact">
+                <i class="fas fa-phone-alt"></i>
+            </div>
+
+            <div class="menu-item" data-target="venue">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+
+            <div class="menu-item" data-target="home">
+                <i class="fas fa-heart"></i>
+            </div>
+
+            <div class="menu-item" data-target="gifts">
+                <i class="fas fa-gift"></i>
+            </div>
+
+            <div class="menu-item" data-target="rsvp">
+                <i class="fas fa-reply"></i>
+            </div>
+
+            <div class="menu-item-selected">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================
+     FOOTER
+    ========================================= -->
+    <footer>
+        <!-- Names & Date -->
+        <p class="footer-text">Tomasz & Dinesha</p>
+
+        <!-- Author credit -->
+        <p class="footer-credit">Crafted with love by Kavesha Kana</p>
+    </footer>
+
+    <!-- Music toggle off & on -->
+    <button id="music-toggle" class="music-toggle">
+        <i class="fas fa-music"></i>
+    </button>
+    </div>
+
+    <!-- =========================================
+     SCRIPTS
+    ========================================= -->
+    <!-- Loading logic -->
+    <script src="js/loader.js"></script>
+
+    <!--Save the date logic-->
+    <script src="js/calender.js"></script>
+
+    <!-- Countdown logic -->
+    <script src="js/countdown.js"></script>
+
+    <!-- SLider logic -->
+    <script src="js/slider.js"></script>
+
+    <!-- Schedule / timeline logic -->
+    <script src="js/schedule.js"></script>
+
+    <!-- Guestbook logic -->
+    <script src="js/guestbook.js"></script>
+
+    <!-- RSVP submission -->
+    <script src="js/rsvp.js"></script>
+
+    <!-- Popup logic -->
+    <script src="js/popups.js"></script>
+
+    <!-- Navigation logic -->
+    <script src="js/navigation.js"></script>
+
+    <!-- Footer logic -->
+    <script src="js/footer.js"></script>
+
+</body>
+
+</html>

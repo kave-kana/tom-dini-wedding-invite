@@ -1,0 +1,365 @@
+/* =========================================
+   BOTTOM NAVIGATION - MENU BAR
+========================================= */
+.menu-bar-container {
+    width: 100%;
+    position: fixed;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.menu-bar-container .menu-bar {
+    width: 100%;
+    max-width: 380px;
+    background: linear-gradient(135deg, var(--regal-green) 0%, var(--dark-green) 50%, var(--regal-green) 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 0 18px;
+    border-radius: 30px;
+    box-shadow: 0 6px 8px var(--dark-green);
+    pointer-events: all;
+}
+
+.menu-bar-container .menu-item {
+    padding: 20px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.menu-bar-container .menu-item:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.menu-bar-container .menu-item-selected {
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    background: linear-gradient(135deg, var(--gold-yellow) 0%, var(--gold-brown) 100%);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    bottom: 30px;
+    border: 3px solid white;
+    color: white;
+    font-size: 20px;
+    transform: translateX(-50%);
+    box-shadow: 0 6px 16px var(--dark-green);
+    z-index: 101;
+    pointer-events: none;
+
+    transition: all 700ms cubic-bezier(0.79, -0.22, 0.37, 1.23);
+}
+
+/* =========================================
+   POPUP OVERLAYS / MODALS
+========================================= */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 1rem;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px var(--dark-green);
+    max-width: 500px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: slideUp 0.3s ease forwards;
+    position: relative;
+}
+
+.popup-overlay.active .popup-content {
+    animation: slideUp 0.3s ease forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.popup-header {
+    padding: 1.5rem;
+    border-bottom: 2px solid var(--light-beige);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-header h2 {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    color: var(--gold-brown);
+    letter-spacing: 1px;
+}
+
+.popup-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--dark-green);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-close:hover {
+    color: var(--gold);
+    transform: rotate(90deg);
+}
+
+.popup-body {
+    padding: 1.5rem;
+    color: var(--dark-green);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Map link tweaks */
+.map-link i { 
+    width: 20px; 
+}
+
+/* QR & gift styles */
+.qr-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border: 1px solid var(--light-beige);
+    border-radius: 8px;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.popup-body p {
+    margin: 0.5rem 0 1rem 0;
+}
+
+.popup-body a {
+    color: var(--gold);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid var(--gold);
+}
+
+.popup-body a:hover {
+    color: var(--gold-brown);
+}
+
+.popup-info-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--light-beige);
+}
+
+.popup-info-item:last-child {
+    border-bottom: none;
+}
+
+.popup-info-icon {
+    font-size: 1.5rem;
+    color: var(--gold);
+    min-width: 30px;
+    text-align: center;
+}
+
+.popup-info-content h4 {
+    margin: 0 0 0.3rem 0;
+    color: var(--gold-brown);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.popup-info-content p {
+    margin: 0;
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+    align-items: center;
+
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    background: rgba(144, 122, 74, 0.1);
+    border-radius: 8px;
+    color: var(--gold-brown);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    border: 1px solid rgba(144, 122, 74, 0.2);
+    width: 80%;
+}
+
+.contact-link:hover {
+    background: rgba(144, 122, 74, 0.2);
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--dark-green);
+}
+
+.contact-link i {
+    font-size: 1rem;
+}
+
+/* Contact Popup Specific Styles */
+.contact-popup {
+    max-width: 550px;
+}
+
+.contact-body {
+    text-align: center;
+}
+
+.contact-intro {
+    margin-bottom: 2rem !important;
+    color: var(--dark-green);
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.contact-card {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(116, 138, 94, 0.05) 0%, rgba(144, 122, 74, 0.05) 100%);
+    border: 1px solid var(--light-beige);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.contact-card h4 {
+    margin: 0.5rem 0 0.25rem 0;
+    color: var(--gold-brown);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.contact-role {
+    margin: 0 0 1rem 0 !important;
+    color: var(--gray);
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .contact-popup {
+        max-width: 95vw;
+    }
+
+    .contact-card {
+        padding: 1.25rem;
+    }
+
+    .contact-avatar {
+        font-size: 2.5rem;
+    }
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+@media (max-width: 480px) {
+    .bottom-navigation {
+        padding: 8px 0;
+    }
+
+    .bottom-navigation button {
+        padding: 10px 6px;
+        font-size: 0.65rem;
+    }
+
+    .bottom-navigation button i {
+        font-size: 1rem;
+    }
+
+    .popup-content {
+        max-width: 95vw;
+    }
+
+    .popup-header {
+        padding: 1rem;
+    }
+
+    .popup-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .popup-body {
+        padding: 1rem;
+    }
+
+    main {
+        padding-bottom: 75px;
+    }
+}
+
+@media (max-width: 360px) {
+    .bottom-navigation button span {
+        display: none;
+    }
+
+    .bottom-navigation button {
+        padding: 12px 8px;
+    }
+}

@@ -1,0 +1,118 @@
+/* =========================================
+   DESKTOP ENHANCEMENTS
+   Applies only to screens wider than 1024px
+========================================= */
+
+@media (min-width: 1024px) {
+
+    /* -----------------------------------------
+       Global content width
+    ------------------------------------------ */
+    section,
+    .hero-content,
+    .schedule-container,
+    .confirmation-container,
+    .message-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    section {
+        padding: 4rem 2rem;
+    }
+
+    /* -----------------------------------------
+       Hero 
+    ------------------------------------------ */
+
+    .hero-content {
+        max-width: 1100px;
+        width: 100%;
+        margin: 0 auto;
+        align-items: flex-start;
+        /* left align */
+        text-align: left;
+        padding-left: 4rem;
+    }
+
+    .hero-top {
+        align-self: flex-start;
+    }
+
+    .hero-bottom {
+        align-self: flex-start;
+    }
+
+    .countdown-buttons {
+        justify-content: flex-start;
+    }
+
+    .countdown-box {
+        justify-content: flex-start;
+    }
+
+    .attend-counter {
+        align-self: flex-start;
+    }
+
+
+    /* -----------------------------------------
+       ABOUT SECTION — two column
+    ------------------------------------------ */
+    .about-card {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 4rem;
+        max-width: 1100px;
+    }
+
+    .portrait-slider {
+        max-width: 380px;
+        /* smaller than text column */
+        margin: 0 auto;
+        /* keep centered inside its flex area */
+        border-radius: 12px;
+    }
+
+    .slides img {
+        height: 500px;
+        /* control visual height */
+        object-fit: cover;
+        /* keeps image nicely cropped */
+    }
+
+    /* -----------------------------------------
+       SCHEDULE — slightly larger cards
+    ------------------------------------------ */
+    .event-card {
+        padding: 3rem 4rem;
+    }
+
+    .event-content h4 {
+        font-size: 2.8rem;
+    }
+
+    /* -----------------------------------------
+       RSVP — two column layout
+    ------------------------------------------ */
+    .rsvp-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .rsvp-grid textarea {
+        grid-column: span 2;
+    }
+
+    .rsvp-submit-btn {
+        grid-column: span 2;
+    }
+
+    /* -----------------------------------------
+       Guestbook spacing
+    ------------------------------------------ */
+    .guestbook-card {
+        max-width: 800px;
+    }
+
+}
