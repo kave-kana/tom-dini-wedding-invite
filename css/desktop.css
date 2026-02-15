@@ -32,7 +32,8 @@
         align-items: flex-start;
         /* left align */
         text-align: left;
-        padding-left: 4rem;
+        padding-left: 8rem;
+        /* Push content left to avoid blocking faces in hero image */
     }
 
     .hero-top {

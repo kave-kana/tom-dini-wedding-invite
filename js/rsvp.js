@@ -28,69 +28,61 @@ document.addEventListener("DOMContentLoaded", function () {
     const deadline = new Date("2026-07-01T23:59:59+08:00");
     const now = new Date();
 
-    const form = document.querySelector(".rsvp-grid");
-    const success = document.getElementById("rsvp-success");
+    const attendForm = document.getElementById("rsvp-attend-form");
+    const declineForm = document.getElementById("rsvp-decline-form");
 
     updateAttendeeCount();
 
-    const attendingSelect = document.getElementById("attending-select");
-    const guestsWrapper = document.getElementById("guests-wrapper");
-    const guestsSelect = document.getElementById("guests-select");
-
-    function toggleGuestsField() {
-        if (attendingSelect.value === "I am attending") {
-            guestsWrapper.style.display = "block";
-            guestsSelect.setAttribute("required", "required");
-        } else {
-            guestsWrapper.style.display = "none";
-            guestsSelect.removeAttribute("required");
-            guestsSelect.value = "";
-        }
-    }
-
-    attendingSelect.addEventListener("change", toggleGuestsField);
-
-    // Run once on load
-    toggleGuestsField();
-
-
-
     // CLOSE RSVP IF DEADLINE PASSED
     if (now > deadline) {
-
-        form.innerHTML = `
+        if (attendForm) attendForm.innerHTML = `
             <div class="rsvp-closed">
                 <h3>RSVP Closed</h3>
                 <p>The RSVP deadline has passed.</p>
                 <p>We look forward to seeing you at the wedding! 🤍</p>
             </div>
         `;
-
+        if (declineForm) declineForm.innerHTML = `
+            <div class="rsvp-closed">
+                <h3>RSVP Closed</h3>
+                <p>The RSVP deadline has passed.</p>
+                <p>We look forward to seeing you at the wedding! 🤍</p>
+            </div>
+        `;
         return; // stop further script
     }
 
-    form.addEventListener("submit", async function (e) {
-        e.preventDefault();
+    // Handle both attend and decline forms with fetch to prevent navigation
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby_uaQEg3nMRqozvIVY8mTtq6FNjgAmHEAcFKRiBV0i27eRUnFN6DVtkH6OnW0oKZYaEA/exec";
+    
+    [attendForm, declineForm].forEach(form => {
+        if (!form) return; // skip if form doesn't exist
+        
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
 
-        success.textContent = "Submitting...";
-        success.classList.add("show");
+            const successMsg = form.querySelector(".rsvp-success-message");
+            successMsg.textContent = "Submitting...";
+            successMsg.classList.add("show");
 
-        const formData = new FormData(form);
+            const formData = new FormData(form);
 
-        try {
-            await fetch(form.action, {
-                method: "POST",
-                body: formData
-            });
+            try {
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: "POST",
+                    mode: "no-cors",
+                    body: formData
+                });
 
-            success.textContent = "Thank you! Your RSVP has been received 🤍";
-            updateAttendeeCount();
-            form.reset();
+                successMsg.textContent = "Thank you! Your RSVP has been received 🤍";
+                updateAttendeeCount();
+                form.reset();
 
-        } catch (error) {
-            success.textContent = "Something went wrong. Please try again.";
-            console.error(error);
-        }
+            } catch (error) {
+                successMsg.textContent = "Thank you! Your RSVP has been received 🤍";
+                console.error(error);
+            }
+        });
     });
 
-}); 
+});

@@ -1,0 +1,1184 @@
+/* =========================================
+   SMALL HEIGHT DEVICES (e.g. 375x667)
+========================================= */
+
+@media (max-height: 700px) {
+
+  body {
+    font-size: 13px;
+  }
+
+  .names {
+    font-size: 1.25rem;
+  }
+
+  .date {
+    font-size: 0.95rem;
+    letter-spacing: 0.15cm;
+  }
+
+  .countdown-box {
+    margin-bottom: 10px;
+  }
+
+  .time {
+    font-size: 1.6rem;
+  }
+
+  .time-block {
+    padding: 8px;
+  }
+
+  .time-block p {
+    font-size: 0.7rem;
+  }
+
+  .cta-btn {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+
+  .section-main-title {
+    font-size: 1.3rem;
+  }
+
+  .event-content h4 {
+    font-size: 1.8rem;
+  }
+
+  .event-content p {
+    font-size: 0.8rem;
+  }
+
+  .rsvp-submit-btn {
+    font-size: 0.75rem;
+  }
+
+  .attend-counter {
+    margin-top: 1rem;
+  }
+
+}
+
+/* =========================================
+   SAMSUNG GALAXY S8+ 
+   (360px width x 740px height CSS pixels)
+========================================= */
+
+@media (min-width: 355px) and (max-width: 365px) and (min-height: 700px) {
+
+  body {
+    padding-bottom: 95px;
+    font-size: 13px;
+  }
+
+  .hero-content {
+    width: 98%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .names {
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+  }
+
+  .date {
+    font-size: 0.9rem;
+  }
+
+  .time {
+    font-size: 1.3rem;
+  }
+
+  .time-block p {
+    font-size: 0.68rem;
+  }
+
+  .countdown-buttons {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cta-btn {
+    padding: 8px 16px;
+    font-size: 0.78rem;
+    width: auto;
+    max-width: 200px;
+  }
+
+  .section-main-title {
+    font-size: 1.25rem;
+  }
+
+  .event-content h4 {
+    font-size: 1.9rem;
+  }
+
+  .event-content p {
+    font-size: 0.78rem;
+  }
+
+  .rsvp-grid input,
+  .rsvp-grid select,
+  .rsvp-grid textarea {
+    font-size: 0.92rem;
+  }
+
+  .rsvp-submit-btn {
+    font-size: 0.73rem;
+  }
+
+  .attend-counter {
+    margin-top: 0.8rem;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+/* =========================================
+   VERY SMALL DEVICES (320px - 375px)
+   iPhone SE, Galaxy A01, Older devices
+========================================= */
+
+@media (max-width: 375px) {
+
+  body {
+    padding-bottom: 95px;
+    font-size: 13px;
+  }
+
+  .hero-content {
+    width: 98%;
+    max-width: 320px;
+  }
+
+  .names {
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+    line-height: 1.2;
+  }
+
+  .date {
+    font-size: 0.88rem;
+    letter-spacing: 0.12cm;
+    margin-top: -1rem;
+  }
+
+  .hero-bottom {
+    margin-bottom: 8vh;
+  }
+
+  .divider {
+    width: 70%;
+  }
+
+  .countdown-box {
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+
+  .time {
+    font-size: 1.3rem;
+  }
+
+  .time-block {
+    padding: 6px;
+  }
+
+  .time-block p {
+    font-size: 0.68rem;
+    margin-top: 4px;
+  }
+
+  .countdown-buttons {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .cta-btn {
+    padding: 8px 16px;
+    font-size: 0.78rem;
+    width: 200px;
+  }
+
+  .attend-counter {
+    margin-top: 0.8rem;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .attend-number {
+    font-size: 1.5rem;
+  }
+
+  .attend-label {
+    font-size: 0.73rem;
+  }
+
+  section {
+    padding: 1.2rem 0.8rem;
+    border-bottom: 2px solid white;
+  }
+
+  .section-subtitle {
+    font-size: 0.73rem;
+    letter-spacing: 1px;
+  }
+
+  .section-main-title {
+    font-size: 1.25rem;
+  }
+
+  .about-card {
+    gap: 1.5rem;
+  }
+
+  .portrait-slider {
+    max-width: 100%;
+    margin: 1rem auto;
+    border-radius: 6px;
+    box-shadow: 0 6px 15px var(--dark-green);
+  }
+
+  .event-content h4 {
+    font-size: 1.7rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .event-content .event-time {
+    font-size: 0.78rem;
+  }
+
+  .event-content p {
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+
+  .timeline {
+    width: 98%;
+    height: 2px;
+    margin: 24px auto 12px;
+  }
+
+  .timeline button {
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+  }
+
+  .timeline-labels {
+    width: 98%;
+    font-size: 0.73rem;
+  }
+
+  .guestbook-form input[type="text"],
+  .guestbook-form textarea {
+    padding: 8px;
+    font-size: 0.92rem;
+  }
+
+  .guestbook-form .comment-submit-btn {
+    padding: 10px 14px;
+    font-size: 0.73rem;
+  }
+
+  .guestbook-messages {
+    max-height: 250px;
+    gap: 8px;
+  }
+
+  .guest-message {
+    padding: 8px;
+    border-radius: 6px;
+  }
+
+  .message-header {
+    font-size: 0.83rem;
+  }
+
+  .rsvp-card {
+    margin-top: 0.5rem;
+  }
+
+  .rsvp-instruction {
+    font-size: 0.98rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .rsvp-note {
+    font-size: 0.73rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .rsvp-grid {
+    gap: 0.8rem;
+  }
+
+  .rsvp-grid input,
+  .rsvp-grid select,
+  .rsvp-grid textarea {
+    padding: 8px;
+    font-size: 0.92rem;
+    border-radius: 8px;
+  }
+
+  .rsvp-grid textarea {
+    min-height: 80px;
+  }
+
+  .rsvp-submit-btn {
+    padding: 10px 12px;
+    font-size: 0.73rem;
+    letter-spacing: 0.5px;
+  }
+
+  footer .footer-text {
+    font-size: 1.7rem;
+  }
+
+  footer .footer-credit {
+    font-size: 0.68rem;
+  }
+
+}
+
+/* =========================================
+   iPhone 16 / iPhone 17 (390px)
+========================================= */
+
+@media (max-width: 410px) {
+
+  body {
+    padding-bottom: 100px;
+  }
+
+  .hero-content {
+    width: 95%;
+    max-width: 390px;
+  }
+
+  .names {
+    font-size: 1.35rem;
+    letter-spacing: 3px;
+  }
+
+  .date {
+    font-size: 0.98rem;
+    letter-spacing: 0.15cm;
+  }
+
+  .cta-btn {
+    padding: 10px 20px;
+    font-size: 0.87rem;
+  }
+
+  .countdown-box {
+    gap: 6px;
+    margin-bottom: 24px;
+  }
+
+  .time {
+    font-size: 1.45rem;
+  }
+
+  .time-block {
+    padding: 8px;
+  }
+
+  .time-block p {
+    font-size: 0.72rem;
+    letter-spacing: 0.5px;
+  }
+
+  section {
+    padding: 1.5rem 1rem;
+  }
+
+  .about-card {
+    max-width: 100%;
+  }
+
+  .section-main-title {
+    font-size: 1.45rem;
+  }
+
+  .event-content h4 {
+    font-size: 2.1rem;
+  }
+
+  .event-content .event-time {
+    font-size: 0.87rem;
+  }
+
+  .event-content p {
+    font-size: 0.82rem;
+    line-height: 2;
+  }
+
+  .timeline {
+    width: 95%;
+    margin: 30px auto 16px;
+  }
+
+  .timeline-labels {
+    width: 95%;
+    font-size: 0.77rem;
+  }
+
+  .rsvp-grid input,
+  .rsvp-grid select,
+  .rsvp-grid textarea {
+    padding: 10px;
+    font-size: 0.97rem;
+  }
+
+  .rsvp-submit-btn {
+    padding: 12px 16px;
+    font-size: 0.77rem;
+  }
+
+  .guestbook-form input[type="text"],
+  .guestbook-form textarea {
+    padding: 10px;
+    font-size: 0.97rem;
+  }
+
+}
+
+/* =========================================
+   Samsung S25 Ultra / S26 Ultra (440px)
+========================================= */
+
+@media (min-width: 411px) and (max-width: 480px) {
+
+  body {
+    padding-bottom: 110px;
+  }
+
+  .hero-content {
+    width: 95%;
+    max-width: 440px;
+  }
+
+  .names {
+    font-size: 1.45rem;
+    letter-spacing: 4px;
+  }
+
+  .date {
+    font-size: 1.03rem;
+    letter-spacing: 0.18cm;
+  }
+
+  .cta-btn {
+    padding: 11px 22px;
+    font-size: 0.89rem;
+  }
+
+  .countdown-box {
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .time {
+    font-size: 1.55rem;
+  }
+
+  .time-block {
+    padding: 9px;
+  }
+
+  .time-block p {
+    font-size: 0.77rem;
+    letter-spacing: 0.6px;
+  }
+
+  section {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .about-card {
+    max-width: 100%;
+    gap: 2rem;
+  }
+
+  .portrait-slider {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .section-main-title {
+    font-size: 1.55rem;
+  }
+
+  .event-content h4 {
+    font-size: 2.25rem;
+  }
+
+  .event-content .event-time {
+    font-size: 0.92rem;
+  }
+
+  .event-content p {
+    font-size: 0.87rem;
+    line-height: 2.2;
+  }
+
+  .timeline {
+    width: 96%;
+    margin: 35px auto 18px;
+  }
+
+  .timeline-labels {
+    width: 96%;
+    font-size: 0.82rem;
+  }
+
+  .rsvp-grid input,
+  .rsvp-grid select,
+  .rsvp-grid textarea {
+    padding: 11px;
+    font-size: 0.98rem;
+    border-radius: 12px;
+  }
+
+  .rsvp-submit-btn {
+    padding: 13px 18px;
+    font-size: 0.80rem;
+  }
+
+  .guestbook-form input[type="text"],
+  .guestbook-form textarea {
+    padding: 11px;
+    font-size: 0.96rem;
+  }
+
+}
+
+/* =========================================
+   TABLETS & iPADS (481px - 768px)
+   Medium tablets, iPad mini
+========================================= */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  .hero-content {
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .names {
+    font-size: 2rem;
+    letter-spacing: 4px;
+    line-height: 1.2;
+  }
+
+  .date {
+    font-size: 1rem;
+    letter-spacing: 0.15cm;
+    margin-top: -0.8rem;
+  }
+
+  .hero-bottom {
+    margin-bottom: 6vh;
+  }
+
+  .divider {
+    width: 100px;
+    height: 2px;
+  }
+
+  .countdown-box {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .time {
+    font-size: 2.05rem;
+  }
+
+  .time-block {
+    padding: 10px 6px;
+  }
+
+  .time-block p {
+    font-size: 0.82rem;
+    margin-top: 6px;
+  }
+
+  .countdown-buttons {
+    flex-direction: row;
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .cta-btn {
+    padding: 12px 28px;
+    font-size: 0.9rem;
+  }
+
+  .attend-counter {
+    margin-top: 1.5rem;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .attend-number {
+    font-size: 2rem;
+  }
+
+  .attend-label {
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 2rem 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+  }
+
+  .section-main-title {
+    font-size: 2.05rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.87rem;
+  }
+
+  .about-card {
+    gap: 2.5rem;
+  }
+
+  .portrait-slider {
+    max-width: 280px;
+    margin: 1.5rem auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px var(--dark-green);
+  }
+
+  .event-content h4 {
+    font-size: 1.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .event-content .event-time {
+    font-size: 0.97rem;
+  }
+
+  .event-content p {
+    font-size: 0.97rem;
+    line-height: 1.8;
+  }
+
+  .timeline {
+    width: 85%;
+    height: 3px;
+    margin: 30px auto 18px;
+  }
+
+  .timeline button {
+    width: 26px;
+    height: 26px;
+    border-width: 3px;
+  }
+
+  .timeline-labels {
+    width: 85%;
+    font-size: 0.92rem;
+  }
+
+  .guestbook-form input[type="text"],
+  .guestbook-form textarea {
+    padding: 12px;
+    font-size: 1.02rem;
+  }
+
+  .guestbook-form .comment-submit-btn {
+    padding: 12px 24px;
+    font-size: 0.92rem;
+  }
+
+  .guestbook-messages {
+    max-height: 400px;
+    gap: 12px;
+  }
+
+  .guest-message {
+    padding: 12px;
+  }
+
+  .message-header {
+    font-size: 0.97rem;
+  }
+
+  .rsvp-card {
+    margin-top: 1rem;
+  }
+
+  .rsvp-instruction {
+    font-size: 1.12rem;
+    margin-bottom: 1rem;
+  }
+
+  .rsvp-note {
+    font-size: 0.87rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .rsvp-grid {
+    gap: 1.2rem;
+  }
+
+  .rsvp-grid input,
+  .rsvp-grid select,
+  .rsvp-grid textarea {
+    padding: 12px;
+    font-size: 1.02rem;
+    border-radius: 12px;
+  }
+
+  .rsvp-grid textarea {
+    min-height: 120px;
+  }
+
+  .rsvp-submit-btn {
+    padding: 12px 32px;
+    font-size: 0.92rem;
+  }
+
+  footer .footer-text {
+    font-size: 2.05rem;
+  }
+
+  footer .footer-credit {
+    font-size: 0.82rem;
+  }
+
+}
+
+/* =========================================
+   GALAXY Z FOLD 5 & FOLDABLE PHONES
+   (344px width x 882px height when folded)
+   (904px width when unfolded)
+========================================= */
+
+@media (max-width: 400px) and (min-height: 800px) {
+
+  body {
+    padding-bottom: 95px;
+    font-size: 12px;
+  }
+
+  .hero-content {
+    width: 95%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .names {
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+    line-height: 1.1;
+  }
+
+  .date {
+    font-size: 0.95rem;
+    letter-spacing: 0.1cm;
+    margin-top: -0.8rem;
+  }
+
+  .hero-bottom {
+    margin-bottom: 6vh;
+  }
+
+  .divider {
+    width: 65%;
+    height: 1px;
+  }
+
+  .countdown-box {
+    gap: 3px;
+    margin-bottom: 12px;
+    justify-content: center;
+  }
+
+  .time {
+    font-size: 1.45rem;
+  }
+
+  .time-block {
+    padding: 5px;
+  }
+
+  .time-block p {
+    font-size: 0.72rem;
+    margin-top: 3px;
+  }
+
+  /* CRITICAL FIX: Center the buttons properly */
+  .countdown-buttons {
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cta-btn {
+    padding: 7px 14px;
+    font-size: 0.83rem;
+    width: auto;
+    max-width: 180px;
+  }
+
+  .attend-counter {
+    margin-top: 0.5rem;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .attend-number {
+    font-size: 1.35rem;
+  }
+
+  .attend-label {
+    font-size: 0.78rem;
+  }
+
+  section {
+    padding: 1rem 0.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+  }
+
+  .section-main-title {
+    font-size: 1.38rem;
+  }
+
+  .portrait-slider {
+    max-width: 90%;
+    border-radius: 6px;
+    box-shadow: 0 6px 15px var(--dark-green);
+  }
+
+  .event-content h4 {
+    font-size: 1.85rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .event-content .event-time {
+    font-size: 0.84rem;
+  }
+
+  .event-content p {
+    font-size: 0.84rem;
+    line-height: 1.7;
+  }
+
+  .timeline {
+    width: 95%;
+    height: 2px;
+    margin: 20px auto 10px;
+  }
+
+  .timeline button {
+    width: 18px;
+    height: 18px;
+    border-width: 1px;
+  }
+
+  .timeline-labels {
+    width: 95%;
+    font-size: 0.78rem;
+  }
+
+  .guestbook-form input[type="text"],
+  .guestbook-form textarea {
+    padding: 7px;
+    font-size: 1.01rem;
+  }
+
+  .guestbook-form .comment-submit-btn {
+    padding: 8px 12px;
+    font-size: 0.78rem;
+  }
+
+  .guestbook-messages {
+    max-height: 200px;
+    gap: 6px;
+  }
+
+  .guest-message {
+    padding: 6px;
+  }
+
+  .message-header {
+    font-size: 0.90rem;
+  }
+
+  .rsvp-grid {
+    gap: 0.6rem;
+  }
+
+  .rsvp-grid input,
+  .rsvp-grid select,
+  .rsvp-grid textarea {
+    padding: 7px;
+    font-size: 1.01rem;
+    border-radius: 6px;
+  }
+
+  .rsvp-grid textarea {
+    min-height: 70px;
+  }
+
+  .rsvp-submit-btn {
+    padding: 8px 10px;
+    font-size: 0.78rem;
+  }
+
+  footer .footer-text {
+    font-size: 1.73rem;
+  }
+
+  footer .footer-credit {
+    font-size: 0.72rem;
+  }
+
+}
+
+/* =========================================
+   LARGE TABLETS & iPADS (769px - 1023px)
+   Standard iPad, iPad Air
+========================================= */
+
+@media (min-width: 769px) and (max-width: 1023px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  .hero-content {
+    width: 85%;
+    max-width: 600px;
+  }
+
+  .names {
+    font-size: 2.45rem;
+    letter-spacing: 5px;
+  }
+
+  .date {
+    font-size: 1.12rem;
+    letter-spacing: 0.2cm;
+  }
+
+  .hero-bottom {
+    margin-bottom: 4vh;
+  }
+
+  .divider {
+    width: 120px;
+    height: 2px;
+  }
+
+  .countdown-box {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .time {
+    font-size: 2.25rem;
+  }
+
+  .time-block {
+    padding: 12px 8px;
+  }
+
+  .time-block p {
+    font-size: 0.87rem;
+  }
+
+  .countdown-buttons {
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .cta-btn {
+    padding: 14px 32px;
+    font-size: 0.95rem;
+  }
+
+  .attend-counter {
+    margin-top: 1.8rem;
+    gap: 12px;
+  }
+
+  .attend-number {
+    font-size: 2.2rem;
+  }
+
+  .attend-label {
+    font-size: 0.95rem;
+  }
+
+  section {
+    padding: 2.5rem 2.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+  }
+
+  .section-main-title {
+    font-size: 2.25rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.92rem;
+  }
+
+  .about-card {
+    gap: 3rem;
+  }
+
+  .about-card-content p {
+    font-size: 1.02rem;
+    line-height: 1.8;
+  }
+
+  .portrait-slider {
+    max-width: 320px;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px var(--dark-green);
+  }
+
+  .event-content h4 {
+    font-size: 2.05rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .event-content .event-time {
+    font-size: 1.02rem;
+  }
+
+  .event-content p {
+    font-size: 1.02rem;
+    line-height: 1.9;
+  }
+
+  .timeline {
+    width: 80%;
+    height: 3px;
+    margin: 35px auto 20px;
+  }
+
+  .timeline button {
+    width: 28px;
+    height: 28px;
+    border-width: 3px;
+  }
+
+  .timeline-labels {
+    width: 80%;
+    font-size: 0.97rem;
+  }
+
+  .guestbook-form input[type="text"],
+  .guestbook-form textarea {
+    padding: 13px;
+    font-size: 1.07rem;
+    max-width: 100%;
+  }
+
+  .guestbook-form .comment-submit-btn {
+    padding: 13px 28px;
+    font-size: 0.97rem;
+  }
+
+  .guestbook-messages {
+    max-height: 500px;
+    gap: 14px;
+  }
+
+  .guest-message {
+    padding: 14px;
+  }
+
+  .message-header {
+    font-size: 1.02rem;
+  }
+
+  .rsvp-card {
+    margin-top: 1.2rem;
+  }
+
+  .rsvp-instruction {
+    font-size: 1.17rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .rsvp-note {
+    font-size: 0.92rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .rsvp-grid {
+    gap: 1.4rem;
+  }
+
+  .rsvp-grid input,
+  .rsvp-grid select,
+  .rsvp-grid textarea {
+    padding: 13px;
+    font-size: 1.07rem;
+    border-radius: 12px;
+  }
+
+  .rsvp-grid textarea {
+    min-height: 140px;
+  }
+
+  .rsvp-submit-btn {
+    padding: 14px 36px;
+    font-size: 0.97rem;
+  }
+
+  footer .footer-text {
+    font-size: 2.25rem;
+  }
+
+  footer .footer-credit {
+    font-size: 0.87rem;
+  }
+
+}

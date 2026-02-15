@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function handleNavigation(target) {
-    switch(target) {
+    switch (target) {
         case 'contact':
             if (typeof popupManager !== 'undefined') {
                 popupManager.openPopup('popup-contact');
@@ -61,13 +61,8 @@ function handleNavigation(target) {
             window.scrollTo({ top: 0, behavior: 'smooth' });
             break;
         case 'rsvp':
-            // Close any open popups and scroll to RSVP section
             if (typeof popupManager !== 'undefined') {
-                popupManager.closePopup();
-            }
-            const rsvpSection = document.getElementById('rsvp-section');
-            if (rsvpSection) {
-                rsvpSection.scrollIntoView({ behavior: 'smooth' });
+                popupManager.openPopup('popup-rsvp-choice');
             }
             break;
         default:

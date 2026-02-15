@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="css/desktop.css">
 
     <!-- Mobile style -->
-    <link rel="stylesheet" href="css/small-mobile.css">
+    <link rel="stylesheet" href="css/mobile.css">
 
 </head>
 
@@ -106,7 +106,7 @@
                     </div>
                     <div class="countdown-buttons">
                         <a href="#" class="cta-btn" data-popup="popup-calendar">Save the Date</a>
-                        <a href="#rsvp-section" class="cta-btn">RSVP</a>
+                        <a href="#" class="cta-btn" id="open-rsvp-popup">RSVP</a>
                     </div>
 
                     <div class="attend-counter">
@@ -307,68 +307,106 @@
                     <h2 class="section-main-title">The Confirmation</h2>
                 </div>
 
-                <!-- RSVP form -->
                 <div class="confirmation-container">
                     <div class="rsvp-card">
-
-                        <form class="rsvp-grid"
-                            action="https://script.google.com/macros/s/AKfycby_uaQEg3nMRqozvIVY8mTtq6FNjgAmHEAcFKRiBV0i27eRUnFN6DVtkH6OnW0oKZYaEA/exec"
-                            method="POST">
-
-                            <label class="small">Your name
-                                <input type="text" name="fullName" placeholder="Your full name" required>
-                            </label>
-
-                            <label class="small">Email
-                                <input type="email" name="email" placeholder="you@example.com">
-                            </label>
-
-                            <label class="small">Attending?
-                                <select name="attending" id="attending-select" required>
-                                    <option value="">Select an option</option>
-                                    <option>I am attending</option>
-                                    <option>Regretfully decline</option>
-                                </select>
-                            </label>
-
-                            <label class="small" id="guests-wrapper">Guests
-                                <select name="guests" id="guests-select">
-                                    <option value="">Select an option</option>
-                                    <option>Myself</option>
-                                    <option>Myself and 1 Guest</option>
-                                </select>
-                            </label>
-
-                            <label class="small">Lunch Selection
-                                <select name="lunchSelection" required>
-                                    <option value="">Select an option</option>
-                                    <option>Non-Vegetarian</option>
-                                    <option>Vegetarian</option>
-                                    <option>No Preference / Happy with Either</option>
-                                </select>
-                            </label>
-
-                            <label class="small">Phone
-                                <input type="tel" name="phone" placeholder="+6012345xxxx" required>
-                            </label>
-
-                            <label class="small">Message (Optional)
-                                <textarea name="message"
-                                    placeholder="Any dietary requirements or special requests?"></textarea>
-                            </label>
-
-                            <button type="submit" class="rsvp-submit-btn">
-                                Submit RSVP
-                            </button>
-
-                            <!-- Success message -->
-                            <p id="rsvp-success" class="rsvp-success-message"></p>
+                        <p class="rsvp-instruction">
+                            Kindly let us know if you will be able to join us on our special day.
+                        </p>
+                        <p class="rsvp-note">
+                            RSVP by <strong>July 1st, 2026</strong>.<br>
+                            Each invitation has been reserved for you and <strong>one guest</strong>.<br>
+                        </p>
 
 
-                        </form>
+                        <!-- FORMS WRAPPER -->
+                        <div class="rsvp-forms">
+
+                            <!-- ATTEND FORM -->
+                            <form id="rsvp-attend-form" class="rsvp-grid hidden">
+
+                                <input type="hidden" name="attending" value="I am attending">
+
+                                <label class="small">Your name
+                                    <input type="text" name="fullName" placeholder="Your full name" required>
+                                </label>
+
+                                <label class="small">Email
+                                    <input type="email" name="email" placeholder="you@example.com">
+                                </label>
+
+                                <label class="small">Guests
+                                    <select name="guests" required>
+                                        <option value="">Select an option</option>
+                                        <option>Myself</option>
+                                        <option>Myself and 1 Guest</option>
+                                    </select>
+                                </label>
+
+                                <label class="small">Lunch Selection
+                                    <select name="lunchSelection" required>
+                                        <option value="">Select an option</option>
+                                        <option>Non-Vegetarian</option>
+                                        <option>Vegetarian</option>
+                                        <option>No Preference / Happy with Either</option>
+                                    </select>
+                                </label>
+
+                                <label class="small">Phone
+                                    <input type="tel" name="phone" placeholder="+6012345xxxx" required>
+                                </label>
+
+                                <label class="small">Message (Optional)
+                                    <textarea name="message"
+                                        placeholder="Any dietary requirements or special requests?"></textarea>
+                                </label>
+
+                                <button type="submit" class="rsvp-submit-btn">
+                                    Submit RSVP
+                                </button>
+
+                                <p id="rsvp-success" class="rsvp-success-message"></p>
+
+                            </form>
+
+
+                            <!-- DECLINE FORM -->
+                            <form id="rsvp-decline-form" class="rsvp-grid hidden">
+
+                                <input type="hidden" name="attending" value="Regretfully decline">
+                                <input type="hidden" name="guests" value="0">
+                                <input type="hidden" name="lunchSelection" value="">
+
+                                <label class="small">Your name
+                                    <input type="text" name="fullName" placeholder="Your full name" required>
+                                </label>
+
+                                <label class="small">Email
+                                    <input type="email" name="email" placeholder="you@example.com">
+                                </label>
+
+                                <label class="small">Phone
+                                    <input type="tel" name="phone" placeholder="+6012345xxxx" required>
+                                </label>
+
+                                <label class="small">Message (Optional)
+                                    <textarea name="message" placeholder="Send your love to the couple..."></textarea>
+                                </label>
+
+                                <button type="submit" class="rsvp-submit-btn">
+                                    Send Response
+                                </button>
+
+                                <p id="rsvp-success-decline" class="rsvp-success-message"></p>
+
+                            </form>
+
+                        </div>
+
                     </div>
                 </div>
+
             </section>
+
 
         </main>
     </div>
@@ -528,6 +566,30 @@
         </div>
     </div>
 
+    <!-- RSVP Popup -->
+    <div class="popup-overlay" id="popup-rsvp-choice">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>RSVP</h2>
+                <button class="popup-close">&times;</button>
+            </div>
+
+            <div class="popup-body">
+                <div class="popup-info-item">
+                    <a href="#" class="contact-link rsvp-choice-btn rsvp-card-option attend-btn" data-choice="attend">
+                        <i class="fas fa-check"></i>
+                        <span>I am attending</span> </a>
+
+                    <a href="#" class="contact-link rsvp-choice-btn rsvp-card-option decline-btn" data-choice="decline">
+                        <i class="fas fa-times"></i>
+                        <span>Regretfully decline</span> </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
     <!-- Bottom Navigation Menu -->
     <div class="menu-bar-container">
         <div class="menu-bar">
@@ -548,7 +610,7 @@
             </div>
 
             <div class="menu-item" data-target="rsvp">
-                <i class="fas fa-reply"></i>
+                <i class="fas fa-envelope-open-text"></i>
             </div>
 
             <div class="menu-item-selected">
@@ -598,6 +660,9 @@
     <!-- Popup logic -->
     <script src="js/popups.js"></script>
 
+    <!-- RSVP Choice submission -->
+    <script src="js/rsvp-choice.js"></script>
+
     <!--Save the date logic-->
     <script src="js/calendar.js"></script>
 
@@ -606,6 +671,9 @@
 
     <!-- Footer logic -->
     <script src="js/footer.js"></script>
+
+    <!-- Scroll animations -->
+    <script src="js/scroll-animations.js"></script>
 
 </body>
 

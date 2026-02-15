@@ -162,6 +162,29 @@ img {
     }
 }
 
+/* =========================================
+   SCROLL ANIMATIONS
+========================================= */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    opacity: 0;
+}
+
+section.fade-in-visible {
+    animation: fadeInUp 0.7s ease-out forwards;
+}
+
 .names .initial {
     font-size: 2em;
     display: inline-block;
@@ -413,6 +436,7 @@ section {
     margin: 2rem auto;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 10px 30px var(--dark-green);
 }
 
 /* All slides stack on top of each other */
@@ -501,46 +525,94 @@ section {
    TIMELINE
 ---------------------------------------------------------- */
 .timeline {
-    margin: 40px auto 10px;
+    margin: 40px auto 20px;
     width: 90%;
-    height: 2px;
+    max-width: 600px;
+    height: 3px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--green);
+    background: linear-gradient(90deg, var(--dark-brown), var(--dark-gold), var(--dark-brown));
+    border-radius: 2px;
+    position: relative;
 }
 
 .timeline button {
     position: relative;
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--green);
+    width: 24px;
+    height: 24px;
+    border: 3px solid var(--dark-brown);
     border-radius: 50%;
     background: white;
     cursor: pointer;
-    transition: transform 0.3s ease;
-    transform: translateY(0%);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform: scale(1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.timeline button:hover {
+    transform: scale(1.2) translateY(-4px);
+    box-shadow: 0 6px 16px rgba(139, 115, 85, 0.4);
+    border-color: var(--dark-gold);
+    animation: timelineBounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .timeline button.active {
-    background: var(--light-brown);
+    background: var(--dark-gold);
+    border-color: var(--dark-gold);
+    box-shadow: 0 4px 16px rgba(60, 45, 5, 0.4);
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 8px rgba(60, 45, 5, 0.4),
+                    0 4px 16px rgba(60, 45, 5, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 16px rgba(227, 193, 96, 0.6),
+                    0 4px 24px rgba(60, 45, 5, 0.5);
+    }
+}
+
+@keyframes timelineBounce {
+    0%, 100% {
+        transform: scale(1.2) translateY(-4px);
+    }
+    50% {
+        transform: scale(1.3) translateY(-8px);
+    }
+}
+
+@keyframes subtleBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
 }
 
 .timeline-labels {
-    margin: 10px auto;
+    margin: 16px auto 0;
     width: 100%;
+    max-width: 600px;
     display: flex;
     justify-content: space-between;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 0.8rem;
-    font-weight: 500px;
+    font-size: 0.85rem;
+    font-weight: 600;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--dark-brown);
 }
 
 .timeline-labels span {
     width: 20%;
     display: inline-block;
     text-align: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+    animation: subtleBounce 3s ease-in-out infinite;
 }
 
 /* ----------------------------------------------------------
@@ -620,7 +692,7 @@ section {
     padding: 12px;
     border-radius: 8px;
     background: white;
-    border: 1px solid var(--light-brown);
+    border: 1px solid var(--gold-brown);
     word-wrap: break-word;
     overflow-wrap: break-word;
     width: 100%;
@@ -683,10 +755,11 @@ section {
     padding: 12px;
     border: 1px solid var(--dark-green);
     background: white;
-    color: var(--gold);
+    color: var(--dark-brown);
     font-family: 'Cormorant Garamond', serif;
     font-size: 1rem;
     transition: all 0.3s ease;
+    border-radius: 12px;
 }
 
 .rsvp-grid textarea {
@@ -731,28 +804,28 @@ section {
 /* Placeholder color (cross-browser) for RSVP form */
 .rsvp-grid input::placeholder,
 .rsvp-grid textarea::placeholder {
-    color: var(--gold);
+    color: var(--dark-green);
     opacity: 1;
 }
 
 .rsvp-grid input::-webkit-input-placeholder,
 .rsvp-grid textarea::-webkit-input-placeholder {
-    color: var(--gold);
+    color: var(--dark-green);
 }
 
 .rsvp-grid input::-moz-placeholder,
 .rsvp-grid textarea::-moz-placeholder {
-    color: var(--gold);
+    color: var(--dark-green);
 }
 
 .rsvp-grid input:-ms-input-placeholder,
 .rsvp-grid textarea:-ms-input-placeholder {
-    color: var(--gold);
+    color: var(--dark-green);
 }
 
 .rsvp-grid input::-ms-input-placeholder,
 .rsvp-grid textarea::-ms-input-placeholder {
-    color: var(--gold);
+    color: var(--dark-green);
 }
 
 .rsvp-success-message {
@@ -768,28 +841,29 @@ section {
     opacity: 1;
 }
 
-.rsvp-closed {
+.hidden {
+    display: none;
+}
+
+.rsvp-instruction {
     text-align: center;
-    padding: 2rem;
-    border: 1px solid var(--gold);
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 10px;
     font-family: 'Cormorant Garamond', serif;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-}
-
-.rsvp-closed h3 {
-    font-family: 'Playfair Display', serif;
-    color: var(--gold-brown);
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-}
-
-.rsvp-closed p {
+    font-size: 1.1rem;
     color: var(--dark-green);
-    font-size: 1rem;
-    margin: 0.5rem 0;
+    margin-bottom: 0.8rem;
 }
+
+.rsvp-note {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    color: var(--dark-brown);
+    opacity: 20.8;
+    margin-bottom: 2rem;
+}
+
+
 
 /* ----------------------------------------------------------
    FOOTER

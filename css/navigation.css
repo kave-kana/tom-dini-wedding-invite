@@ -317,6 +317,22 @@
 }
 
 /* =========================================
+   RSVP POPUP CHOICE
+========================================= */
+
+#popup-rsvp-choice .popup-body {
+    padding-bottom: 0.1rem;
+}
+
+.rsvp-choice-btn {
+    width: 85%;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    border-radius: 10px;       /* slightly softer corners */
+}
+
+
+/* =========================================
    RESPONSIVE DESIGN
 ========================================= */
 @media (max-width: 480px) {
