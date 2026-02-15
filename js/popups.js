@@ -141,3 +141,11 @@ class PopupManager {
 
 // Initialize popup manager
 const popupManager = new PopupManager();
+
+document.querySelectorAll("[data-popup]").forEach(btn => {
+    btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        const popupId = this.getAttribute("data-popup");
+        popupManager.openPopup(popupId);
+    });
+});

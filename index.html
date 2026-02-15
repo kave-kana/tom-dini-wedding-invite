@@ -105,7 +105,7 @@
                         </div>
                     </div>
                     <div class="countdown-buttons">
-                        <a href="#" class="cta-btn" onclick="downloadCalendarEvent()">Save the Date</a>
+                        <a href="#" class="cta-btn" data-popup="popup-calendar">Save the Date</a>
                         <a href="#rsvp-section" class="cta-btn">RSVP</a>
                     </div>
 
@@ -138,20 +138,25 @@
                 <div class="about-card">
                     <div class="bio">
                         <p>
-                            Having been pen pals for over a year, Tom and Dinesha met in person for the
-                            very first time in the summer of 2019. From that moment, they instantly fell
-                            in love and soon began their journey together.
+                            After a year of heartfelt letters and long conversations across the distance,
+                            Tom and Dinesha finally met in the summer of 2020.
                         </p>
-
-                        <p>
-                            Ever since, they have been side by side. Travelling the world, enjoying
-                            their shared hobbies, discovering great food, and building an amazing
-                            future together.
+                        <p>What began as friendship gently blossomed into something
+                            extraordinary the very moment they saw each other,
+                            a love that felt both exciting and familiar,
+                            as if it had always been waiting for them.
                         </p>
-
                         <p>
-                            Now, Tom and Dinesha would love to invite you to celebrate their wedding and
-                            share in the joy and happiness of this beautiful day.
+                            Since that day, they have walked through life hand in hand,
+                            exploring new places, sharing laughter over simple joys,
+                            dreaming boldly, and building a life filled with warmth,
+                            adventure, and unwavering support.
+                        </p>
+                        <p>
+                            With grateful hearts and endless love,
+                            Tom and Dinesha joyfully invite you to celebrate the
+                            beginning of their forever, a day that marks not just a
+                            wedding but a promise of a lifetime together.
                         </p>
                     </div>
 
@@ -161,9 +166,9 @@
                         <img src="pics/11.jpg" class="slide" alt="Tom and Dinesha portrait 2">
                         <img src="pics/07.jpeg" class="slide" alt="Tom and Dinesha portrait 3">
                         <img src="pics/08.jpeg" class="slide" alt="Tom and Dinesha portrait 4">
-                        <img src="pics/28.jpeg" class="slide" alt="Tom and Dinesha portrait 5">
-                        <img src="pics/09.jpg" class="slide" alt="Tom and Dinesha portrait 6">
-                        <img src="pics/06.jpg" class="slide" alt="Tom and Dinesha portrait 7">
+                        <img src="pics/28.JPEG" class="slide" alt="Tom and Dinesha portrait 5">
+                        <img src="pics/09.JPG" class="slide" alt="Tom and Dinesha portrait 6">
+                        <img src="pics/06.JPG" class="slide" alt="Tom and Dinesha portrait 7">
                         <img src="pics/16.jpg" class="slide" alt="Tom and Dinesha portrait 8">
                         <img src="pics/05.jpg" class="slide" alt="Tom and Dinesha portrait 9">
                         <img src="pics/24.jpg" class="slide" alt="Tom and Dinesha portrait 10">
@@ -371,6 +376,42 @@
     <!-- =========================================
         POPUP OVERLAYS / MODALS
         ========================================= -->
+
+    <!-- Calendar Popup -->
+    <div class="popup-overlay" id="popup-calendar">
+        <div class="popup-content calendar-popup">
+            <div class="popup-header">
+                <h2>Save the Date</h2>
+                <button class="popup-close">&times;</button>
+            </div>
+
+            <div class="popup-body calendar-body">
+
+                <div class="calendar-card" data-calendar="google">
+                    <div class="calendar-icon">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h4>Google Calendar</h4>
+                </div>
+
+                <div class="calendar-card" data-calendar="apple">
+                    <div class="calendar-icon">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <h4>Apple Calendar</h4>
+                </div>
+
+                <div class="calendar-card" data-calendar="android">
+                    <div class="calendar-icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <h4>Android Calendar</h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <!-- Contact Popup -->
     <div class="popup-overlay" id="popup-contact">
         <div class="popup-content contact-popup">
@@ -390,7 +431,7 @@
                                 <i class="fas fa-phone-alt"></i>
                                 <span>+60 12-506 3488</span>
                             </a>
-                            <a href="https://wa.me/0125063488" target="_blank" class="contact-link whatsapp-link">
+                            <a href="https://wa.me/+60125063488" target="_blank" class="contact-link whatsapp-link">
                                 <i class="fab fa-whatsapp"></i>
                                 <span>WhatsApp</span>
                             </a>
@@ -406,7 +447,7 @@
                                 <i class="fas fa-phone-alt"></i>
                                 <span>+60 16-684 4963</span>
                             </a>
-                            <a href="https://wa.me/0166844963" target="_blank" class="contact-link whatsapp-link">
+                            <a href="https://wa.me/+60166844963" target="_blank" class="contact-link whatsapp-link">
                                 <i class="fab fa-whatsapp"></i>
                                 <span>WhatsApp</span>
                             </a>
@@ -539,9 +580,6 @@
     <!-- Loading logic -->
     <script src="js/loader.js"></script>
 
-    <!--Save the date logic-->
-    <script src="js/calender.js"></script>
-
     <!-- Countdown logic -->
     <script src="js/countdown.js"></script>
 
@@ -559,6 +597,9 @@
 
     <!-- Popup logic -->
     <script src="js/popups.js"></script>
+
+    <!--Save the date logic-->
+    <script src="js/calendar.js"></script>
 
     <!-- Navigation logic -->
     <script src="js/navigation.js"></script>
