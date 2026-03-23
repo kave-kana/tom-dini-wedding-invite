@@ -49,7 +49,6 @@
 </head>
 
 <body>
-
     <!-- Music -->
     <audio id="bg-music" loop>
         <source src="audio/Thuli_Thuli.mp3" type="audio/mpeg">
@@ -57,12 +56,64 @@
 
     <!-- Loader -->
     <div class="page-loader" id="page-loader">
-        <div class="loader-ring"></div>
-        <p class="loader-text">Tomasz & Dinesha</p>
+        <div class="envelope" id="envelope">
+            <div class="envelope-content">
+                <div class="loader-ring"></div>
+                <p class="loader-text" id="loader-message">Loading your invitation</p>
 
-        <button id="enter-btn" class="enter-btn">
-            Enter with Music
-        </button>
+                <!-- Magical Sparkles -->
+                <div class="sparkles">
+                    <div class="sparkle large"></div>
+                    <div class="sparkle medium"></div>
+                    <div class="sparkle small"></div>
+                    <div class="sparkle large"></div>
+                    <div class="sparkle medium"></div>
+                    <div class="sparkle small"></div>
+                    <div class="sparkle large"></div>
+                    <div class="sparkle medium"></div>
+                    <div class="sparkle small"></div>
+                    <div class="sparkle large"></div>
+                    <div class="sparkle medium"></div>
+                    <div class="sparkle small"></div>
+                    <div class="sparkle large"></div>
+                    <div class="sparkle medium"></div>
+                    <div class="sparkle small"></div>
+                    <div class="sparkle large"></div>
+                    <div class="sparkle star"></div>
+                    <div class="sparkle star"></div>
+                    <div class="sparkle star"></div>
+                    <div class="sparkle star"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="enter-btn" class="enter-btn hidden">
+        Click to view your invitation
+    </button>
+
+    <!-- Magical Burst Sparkles -->
+    <div class="burst-sparkles" id="burst-sparkles">
+        <div class="burst-sparkle large"></div>
+        <div class="burst-sparkle medium"></div>
+        <div class="burst-sparkle small"></div>
+        <div class="burst-sparkle large"></div>
+        <div class="burst-sparkle medium"></div>
+        <div class="burst-sparkle small"></div>
+        <div class="burst-sparkle large"></div>
+        <div class="burst-sparkle medium"></div>
+        <div class="burst-sparkle small"></div>
+        <div class="burst-sparkle large"></div>
+        <div class="burst-sparkle medium"></div>
+        <div class="burst-sparkle small"></div>
+        <div class="burst-sparkle large"></div>
+        <div class="burst-sparkle medium"></div>
+        <div class="burst-sparkle small"></div>
+        <div class="burst-sparkle large"></div>
+        <div class="burst-sparkle star"></div>
+        <div class="burst-sparkle star"></div>
+        <div class="burst-sparkle star"></div>
+        <div class="burst-sparkle star"></div>
     </div>
 
     <!-- INVITATION CONTENT -->
@@ -515,14 +566,13 @@
                 </div>
 
                 <div class="contact-methods">
-                    <a class="contact-link map-link" href="https://ul.waze.com/ul?place=ChIJ6ZkoC1hJzDERz-bMRsJqABM&ll=3.11297000%2C101.62849000&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                    <a class="contact-link map-link"
+                        href="https://ul.waze.com/ul?place=ChIJ6ZkoC1hJzDERz-bMRsJqABM&ll=3.11297000%2C101.62849000&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
                         target="_blank">
                         <i class="fab fa-waze"></i>
                         <span>Open in Waze</span>
                     </a>
-                    <a class="contact-link map-link"
-                        href="https://maps.app.goo.gl/hRAz9TPyWHfk2AcZA"
-                        target="_blank">
+                    <a class="contact-link map-link" href="https://maps.app.goo.gl/hRAz9TPyWHfk2AcZA" target="_blank">
                         <i class="fas fa-map"></i>
                         <span>Open in Google Maps</span>
                     </a>
@@ -584,7 +634,7 @@
                         <i class="fas fa-times"></i>
                         <span>Regretfully decline</span> </a>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -607,6 +657,7 @@
 
             <div class="menu-item" data-target="gifts">
                 <i class="fas fa-gift"></i>
+
             </div>
 
             <div class="menu-item" data-target="rsvp">
