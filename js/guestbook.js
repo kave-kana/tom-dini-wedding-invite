@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx7bHzpTroJ3z-cBa6P2_eZ1d1shp4ry1vrb0CfglxRqI6s2JHN9TwLSSvxP_H_EMIYog/exec";
 
     const form = document.getElementById("guestbook-form");
     const nameInput = document.getElementById("guest-name");
     const messageInput = document.getElementById("guest-message");
     const messagesContainer = document.getElementById("guestbook-messages");
+    const statusMessage = document.getElementById("guestbook-status");
+    const submitButton = form.querySelector(".comment-submit-btn");
 
-    // Escape HTML to prevent XSS
     function escapeHtml(str) {
         return String(str)
             .replace(/&/g, "&amp;")
@@ -17,9 +17,20 @@ document.addEventListener("DOMContentLoaded", function () {
             .replace(/'/g, "&#039;");
     }
 
-    // Render messages
+    function showStatus(message, type = "success") {
+        if (!statusMessage) return;
+        statusMessage.textContent = message;
+        statusMessage.className = `guestbook-status show ${type}`;
+    }
+
+    function clearStatus() {
+        if (!statusMessage) return;
+        statusMessage.textContent = "";
+        statusMessage.className = "guestbook-status";
+    }
+
     function renderMessages(data) {
-        messagesContainer.innerHTML = '';
+        messagesContainer.innerHTML = "";
 
         if (!data || data.length === 0) {
             messagesContainer.innerHTML =
@@ -28,27 +39,25 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         data.slice().reverse().forEach(entry => {
-            const el = document.createElement('article');
-            el.className = 'guest-message';
+            const el = document.createElement("article");
+            el.className = "guest-message";
 
             el.innerHTML = `
-            <div class="message-header">
-                <strong class="guest-name">${escapeHtml(entry.Name)}</strong>
-                <time class="message-time">
-                    ${new Date(entry.Timestamp).toLocaleString()}
-                </time>
-            </div>
-            <div class="message-body">
-                ${escapeHtml(entry.Message).replace(/\n/g, '<br>')}
-            </div>
-        `;
+                <div class="message-header">
+                    <strong class="guest-name">${escapeHtml(entry.Name)}</strong>
+                    <time class="message-time">
+                        ${new Date(entry.Timestamp).toLocaleString()}
+                    </time>
+                </div>
+                <div class="message-body">
+                    ${escapeHtml(entry.Message).replace(/\n/g, "<br>")}
+                </div>
+            `;
 
             messagesContainer.appendChild(el);
         });
     }
 
-
-    // Fetch all messages
     async function loadMessages() {
         try {
             const response = await fetch(SCRIPT_URL);
@@ -59,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Handle submission
     form.addEventListener("submit", async function (e) {
         e.preventDefault();
 
@@ -77,21 +85,41 @@ document.addEventListener("DOMContentLoaded", function () {
         formData.append("message", message);
 
         try {
-            await fetch(SCRIPT_URL, {
+            submitButton.disabled = true;
+            submitButton.classList.add("is-loading");
+            submitButton.textContent = "Sending...";
+            showStatus("Saving your message...", "success");
+
+            const response = await fetch(SCRIPT_URL, {
                 method: "POST",
                 body: formData
             });
+
+            if (!response.ok) {
+                throw new Error("Failed to save guestbook message");
+            }
 
             nameInput.value = "";
             messageInput.value = "";
 
             await loadMessages();
 
+            submitButton.textContent = "Send Wishes";
+            showStatus("Your message has been saved to the guestbook.", "success");
+
+            setTimeout(() => {
+                clearStatus();
+            }, 3500);
+
         } catch (err) {
             console.error("Error submitting guestbook:", err);
+            submitButton.textContent = "Send Wishes";
+            showStatus("Sorry, your message could not be saved. Please try again.", "error");
+        } finally {
+            submitButton.disabled = false;
+            submitButton.classList.remove("is-loading");
         }
     });
 
-    // Initial load
     loadMessages();
 });
